@@ -3,334 +3,1032 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shefin X Roshan – BCA, Entrepreneur, Founder of SXR</title>
-<meta name="description" content="Shefin X Roshan - BCA Graduate, Entrepreneur & Founder of SXR. Technology, Cybersecurity, Creative Professional. Building brands through technology, creativity, and innovation."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Bebas+Neue&family=Fira+Code:wght@400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet"/>
+<title>SHEFIN X ROSHAN — BCA | Entrepreneur | Founder of SXR</title>
+<meta name="description" content="Shefin X Roshan - BCA Graduate, Entrepreneur & Founder of SXR. Technology, Cybersecurity, Creative Professional. Building brands with technology, creativity, and luxury."/>
 <meta name="author" content="Shefin X Roshan"/>
-<meta name="keywords" content="Shefin X Roshan,SXR,BCA,Entrepreneur,Technology,Cybersecurity,Web Development,Graphic Design,Video Editing"/>
-<meta property="og:title" content="Shefin X Roshan – BCA, Entrepreneur, Founder of SXR"/>
-<meta property="og:description" content="Entrepreneur & Creator. BCA | Technology | Cybersecurity | Design | Business | Luxury Lifestyle"/>
-<meta property="og:url" content="https://shefinxroshan.com/"/>
-<meta property="og:site_name" content="Shefin X Roshan"/>
-<meta property="og:locale" content="en_IN"/>
-<meta property="og:type" content="website"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Shefin X Roshan – BCA, Entrepreneur, Founder of SXR"/>
-<meta name="twitter:description" content="Entrepreneur & Creator. BCA | Technology | Cybersecurity | Design | Business | Luxury Lifestyle"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-<link rel="alternate icon" type="image/png" href="/assets/spider-logo.png"/>
-<link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg"/>
-<link rel="apple-touch-icon" href="/favicon.svg"/>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
-a { color: #e61946; text-decoration: none; }
-a:hover { text-decoration: underline; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-header { padding: 20px 0; border-bottom: 1px solid #222; position: sticky; top: 0; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); z-index: 1000; }
-nav { display: flex; justify-content: space-between; align-items: center; }
-.brand { font-size: 24px; font-weight: 700; color: #e61946; }
-nav a { margin-left: 30px; color: #fff; transition: color 0.3s; }
-nav a:hover { color: #e61946; }
-section { padding: 80px 0; }
-h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; }
-h2 { font-size: 36px; font-weight: 700; margin-bottom: 40px; }
-h3 { font-size: 24px; font-weight: 600; margin-bottom: 15px; }
-p { font-size: 16px; line-height: 1.8; margin-bottom: 15px; opacity: 0.9; }
-.hero { text-align: center; padding: 120px 0; }
-.hero h1 { font-size: 64px; margin-bottom: 10px; }
-.hero .subtitle { font-size: 20px; color: #e61946; margin-bottom: 30px; }
-.btn { display: inline-block; padding: 12px 30px; background: #e61946; color: #fff; border-radius: 6px; transition: all 0.3s; border: none; cursor: pointer; font-size: 16px; font-weight: 600; }
-.btn:hover { background: #c91540; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(230,25,70,0.3); }
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-.skill-card { background: #1a1a1a; padding: 30px; border-radius: 8px; border: 1px solid #333; }
-.skill-card h4 { color: #e61946; margin-bottom: 15px; }
-.skill-card ul { list-style: none; }
-.skill-card li { padding: 8px 0; }
-.skill-card li:before { content: "→ "; color: #e61946; margin-right: 10px; }
-.footer { background: #000; padding: 40px 0; border-top: 1px solid #333; text-align: center; }
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0404;
+  --bg-secondary: #1a0a0a;
+  --accent: #ff1e2d;
+  --accent-light: #ff4455;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --border-color: #2a1515;
+  --glass-bg: rgba(255, 30, 45, 0.05);
+  --glass-border: rgba(255, 30, 45, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(255, 30, 45, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Cursor */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+a, button {
+  cursor: none;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 4, 4, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 20px 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  text-shadow: 0 0 20px var(--accent);
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Canvas Background */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 1000px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-greeting {
+  font-size: 18px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-role {
+  font-size: 24px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out 0.6s both;
+  font-weight: 600;
+}
+
+.hero-bio {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 30px auto;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-id-card {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  margin: 60px auto 40px;
+  perspective: 1000px;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.id-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 30, 45, 0.1) 0%, rgba(255, 30, 45, 0.05) 100%);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(255, 30, 45, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transform-style: preserve-3d;
+  animation: float 3s ease-in-out infinite;
+}
+
+.id-photo {
+  width: 100%;
+  height: 160px;
+  background: rgba(255, 30, 45, 0.1);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--glass-border);
+  object-fit: cover;
+}
+
+.id-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.id-role {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.btn {
+  padding: 14px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-radius: 8px;
+  cursor: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 30, 45, 0.5), inset 0 0 20px rgba(255, 30, 45, 0.1);
+  transform: translateY(-3px);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn.secondary:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* Stats */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 600px;
+  margin: 60px auto 0;
+  animation: fadeInUp 1s ease-out 1.4s both;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 30, 45, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(255, 30, 45, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 30, 45, 0.15);
+}
+
+.stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Sections */
+section {
+  position: relative;
+  z-index: 2;
+  padding: 120px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Cards - Glassmorphism */
+.card {
+  background: linear-gradient(135deg, rgba(255, 30, 45, 0.08) 0%, rgba(255, 30, 45, 0.02) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(255, 30, 45, 0.08);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 30, 45, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 50px rgba(255, 30, 45, 0.2), inset 0 0 30px rgba(255, 30, 45, 0.05);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.card ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.card li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 20px;
+}
+
+.card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Project Cards */
+.project-card {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: none;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 30, 45, 0.9) 0%, rgba(10, 4, 4, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.project-card:hover .project-overlay {
+  transform: translateY(0);
+}
+
+.project-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.project-tech {
+  font-size: 12px;
+  color: var(--text-primary);
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* About Section */
+#about {
+  background: var(--bg-secondary);
+}
+
+#about .card {
+  margin-top: 30px;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  background: var(--bg-secondary);
+}
+
+#contact .card {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 30, 45, 0.3);
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  border-top: 1px solid var(--glass-border);
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+footer .footer-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateZ(2deg);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 30, 45, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 30, 45, 0.6);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  h1 { font-size: 36px; }
-  h2 { font-size: 28px; }
-  nav a { margin-left: 15px; font-size: 14px; }
-  .hero { padding: 60px 0; }
+  header {
+    padding: 15px 0;
+  }
+
+  .header-container {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-name {
+    font-size: 48px;
+  }
+
+  .hero-role {
+    font-size: 16px;
+  }
+
+  .hero-id-card {
+    width: 240px;
+    height: 320px;
+    margin: 40px auto 30px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  section h2 {
+    font-size: 36px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
 <body>
 
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Canvas Background -->
+<canvas id="heroCanvas"></canvas>
+
+<!-- Header -->
 <header>
-<nav class="container">
-<div class="brand">SHEFIN X ROSHAN</div>
-<div>
+<div class="header-container">
+<a href="#" class="logo">SXR</a>
+<nav>
 <a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#business">Business</a>
+<a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
-<a href="#vision">Vision</a>
 <a href="#contact">Contact</a>
-</div>
 </nav>
+</div>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
-<div class="container">
-<h1>SHEFIN X ROSHAN</h1>
-<p class="subtitle">BCA | Entrepreneur | Founder of SXR | Technology & Cybersecurity | Creative Professional</p>
-<p style="font-size: 18px; max-width: 800px; margin: 30px auto;">A young entrepreneur and technology enthusiast with passion for building brands, creating digital experiences, and exploring new opportunities through technology, creativity, and innovation.</p>
+<div class="hero-container">
+<div class="hero-greeting">Welcome to my portfolio</div>
+<h1 class="hero-name">SHEFIN X ROSHAN</h1>
+<div class="hero-role">BCA | Entrepreneur | Founder of SXR</div>
+<p class="hero-bio">Technology Enthusiast • Cybersecurity Expert • Creative Professional<br/>Building brands through innovation, creativity, and digital excellence</p>
+
+<div class="hero-id-card">
+<div class="id-card">
+<div class="id-photo" style="background: linear-gradient(135deg, var(--accent) 0%, rgba(255,30,45,0.3) 100%);"></div>
+<div class="id-name">SHEFIN X ROSHAN</div>
+<div class="id-role">Entrepreneur & Creator</div>
+</div>
+</div>
+
+<div class="hero-buttons">
 <button class="btn">Get In Touch</button>
-<button class="btn" style="background: transparent; border: 2px solid #e61946; margin-left: 15px;">Download CV</button>
+<button class="btn secondary">Download CV</button>
+</div>
+
+<div class="hero-stats">
+<div class="stat-item">
+<div class="stat-number">BCA</div>
+<div class="stat-label">Education</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">SXR</div>
+<div class="stat-label">Founder</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">10+</div>
+<div class="stat-label">Skills</div>
+</div>
+</div>
 </div>
 </section>
 
+<!-- About Section -->
 <section id="about">
-<div class="container">
 <h2>About Me</h2>
-<p>I am passionate about technology, entrepreneurship, creativity, luxury, automobiles, travel, music, and football.</p>
-<p>I enjoy learning new technologies, creating digital products, developing applications and websites, designing visuals, editing photos and videos, understanding business operations, and building strong brands.</p>
-<p>My goal is to continuously improve my skills, build meaningful businesses, and create a personal brand that represents creativity, ambition, professionalism, and modern luxury.</p>
-<p style="margin-top: 30px; font-style: italic; color: #e61946;">With a Bachelor of Computer Applications (BCA) background, I have developed skills across technology, application development, website development, cybersecurity, ethical hacking, graphic design, photo editing, video editing, sales, supplier management, purchase management, and stock management.</p>
+<div class="grid-2">
+<div class="card">
+<h3>Who I Am</h3>
+<p>I'm a young entrepreneur and technology enthusiast with a passion for building brands, creating digital experiences, and exploring new opportunities. With a BCA background, I combine technical expertise with creative vision and business acumen.</p>
 </div>
-</section>
-
-<section id="education">
-<div class="container">
-<h2>Education</h2>
-<div class="skill-card" style="max-width: 800px;">
-<h3>Bachelor of Computer Applications — BCA</h3>
-<p>My academic background in Computer Applications has given me a foundation in:</p>
-<ul style="list-style: none;">
-<li>✓ Computer Applications</li>
-<li>✓ Software & Technology</li>
-<li>✓ Web Technologies</li>
-<li>✓ Application Development</li>
-<li>✓ Digital Systems</li>
-<li>✓ Cybersecurity</li>
-<li>✓ Problem Solving</li>
-<li>✓ Technology & Innovation</li>
-</ul>
+<div class="card">
+<h3>What I Do</h3>
+<p>I develop applications, create websites, design digital content, implement cybersecurity solutions, and lead innovative business ventures. My focus is on creating meaningful products that blend technology, creativity, and luxury.</p>
+</div>
+<div class="card">
+<h3>My Vision</h3>
+<p>To build a strong personal brand by combining technology, entrepreneurship, creativity, business, and luxury. Every project is an opportunity to create something people remember.</p>
+</div>
+<div class="card">
+<h3>Philosophy</h3>
+<p><strong>Think Different.</strong> Learn Continuously. Build Fearlessly. Create Beautifully. Dream Bigger.</p>
+<p style="margin-top: 15px; font-size: 14px; font-style: italic;">Success comes from curiosity, consistency, creativity, discipline, and the courage to build your own path.</p>
 </div>
 </div>
 </section>
 
-<section id="business">
-<div class="container">
-<h2>Business & Entrepreneurship</h2>
-<div class="skills-grid">
-<div class="skill-card">
-<h4>Entrepreneur</h4>
-<p>I am passionate about identifying opportunities, developing business ideas, building brands, understanding customers, and turning concepts into real-world businesses.</p>
-</div>
-<div class="skill-card">
-<h4>Founder — SXR</h4>
-<p>SXR is my personal brand representing a vision for combining Luxury • Creativity • Technology • Lifestyle • Ambition</p>
-<p style="font-size: 14px; color: #e61946;">Built with Vision. Designed with Purpose. Driven by Ambition.</p>
-</div>
+<!-- Projects Section -->
+<section id="projects">
+<h2>Featured Projects</h2>
+<div class="grid-2" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 50px;">
+<div class="project-card">
+<div class="project-image" style="background: linear-gradient(135deg, var(--accent) 0%, rgba(255,30,45,0.3) 100%); display: flex; align-items: center; justify-content: center; font-size: 48px;">🚀</div>
+<div class="project-overlay">
+<div class="project-name">Project One</div>
+<div class="project-desc">Web Development & Design</div>
+<div class="project-tech">Next.js • React • Tailwind CSS</div>
+<a href="#" class="project-link">View Project →</a>
 </div>
 </div>
-</section>
-
-<section style="background: #1a1a1a;">
-<div class="container">
-<h2>Technology & Cybersecurity</h2>
-<p>My technology interests and skills include:</p>
-<div class="skills-grid" style="margin-top: 40px;">
-<div>
-<h4 style="color: #e61946; margin-bottom: 20px;">Development</h4>
-<ul style="list-style: none;">
-<li>✓ Application Development</li>
-<li>✓ Website Development</li>
-<li>✓ Software Solutions</li>
-<li>✓ Web Solutions</li>
-</ul>
+<div class="project-card">
+<div class="project-image" style="background: linear-gradient(135deg, var(--accent) 0%, rgba(255,30,45,0.3) 100%); display: flex; align-items: center; justify-content: center; font-size: 48px;">💻</div>
+<div class="project-overlay">
+<div class="project-name">Project Two</div>
+<div class="project-desc">Application Development</div>
+<div class="project-tech">JavaScript • Python • APIs</div>
+<a href="#" class="project-link">View Project →</a>
 </div>
-<div>
-<h4 style="color: #e61946; margin-bottom: 20px;">Security & Hacking</h4>
-<ul style="list-style: none;">
-<li>✓ Cybersecurity</li>
-<li>✓ Ethical Hacking</li>
-<li>✓ Digital Technology</li>
-<li>✓ Technology Research</li>
-</ul>
 </div>
-<div>
-<h4 style="color: #e61946; margin-bottom: 20px;">Innovation</h4>
-<ul style="list-style: none;">
-<li>✓ Digital Innovation</li>
-<li>✓ Problem Solving</li>
-<li>✓ Technology Understanding</li>
-<li>✓ Practical Solutions</li>
-</ul>
+<div class="project-card">
+<div class="project-image" style="background: linear-gradient(135deg, var(--accent) 0%, rgba(255,30,45,0.3) 100%); display: flex; align-items: center; justify-content: center; font-size: 48px;">🎨</div>
+<div class="project-overlay">
+<div class="project-name">Project Three</div>
+<div class="project-desc">Design & Branding</div>
+<div class="project-tech">Graphic Design • Branding</div>
+<a href="#" class="project-link">View Project →</a>
 </div>
 </div>
 </div>
 </section>
 
-<section id="creative">
-<div class="container">
-<h2>Creative Skills</h2>
-<p style="font-size: 18px; margin-bottom: 40px;">Creativity is one of the strongest parts of my personality and work.</p>
-<div class="skills-grid">
-<div class="skill-card">
-<h4>Graphic Design</h4>
-<p>Creating modern, premium, and visually appealing designs for brands, businesses, products, and social media.</p>
-</div>
-<div class="skill-card">
-<h4>Photo Editing</h4>
-<p>Professional image enhancement, retouching, creative compositions, product visuals, and branding content.</p>
-</div>
-<div class="skill-card">
-<h4>Video Editing</h4>
-<p>Creating engaging video content, promotional videos, social media content, product videos, and creative visual experiences.</p>
-</div>
-<div class="skill-card">
-<h4>Digital Branding</h4>
-<p>Building strong visual identities and creating content that makes a brand look Premium • Modern • Professional • Memorable</p>
-</div>
-</div>
-</div>
-</section>
-
-<section style="background: #1a1a1a;">
-<div class="container">
-<h2>Sales & Business Management</h2>
-<p style="margin-bottom: 40px;">I have a strong interest in sales and business operations.</p>
-<div class="skills-grid">
-<div class="skill-card">
-<h4>Sales</h4>
-<p>Understanding customers, communication, relationship building, product presentation, negotiation, and converting opportunities into results.</p>
-</div>
-<div class="skill-card">
-<h4>Supplier Management</h4>
-<p>Managing supplier relationships, sourcing products, communicating with vendors, and maintaining reliable supplier networks.</p>
-</div>
-<div class="skill-card">
-<h4>Purchase Management</h4>
-<p>Handling purchasing requirements, supplier coordination, product sourcing, pricing discussions, and procurement planning.</p>
-</div>
-<div class="skill-card">
-<h4>Stock Management</h4>
-<p>Managing inventory, monitoring stock levels, organizing products, and maintaining efficient stock control.</p>
-</div>
-</div>
-</div>
-</section>
-
+<!-- Skills Section -->
 <section id="skills">
-<div class="container">
-<h2>My Complete Skillset</h2>
-<div class="skills-grid">
-<div class="skill-card">
-<h4>🔧 Technology</h4>
+<h2>My Skillset</h2>
+<div class="grid-2">
+<div class="card">
+<h3>🔧 Technology</h3>
 <ul>
 <li>Application Development</li>
 <li>Website Development</li>
 <li>Cybersecurity</li>
 <li>Ethical Hacking</li>
+<li>Digital Systems</li>
 </ul>
 </div>
-<div class="skill-card">
-<h4>🎨 Creative</h4>
+<div class="card">
+<h3>🎨 Creative</h3>
 <ul>
 <li>Graphic Design</li>
 <li>Photo Editing</li>
 <li>Video Editing</li>
 <li>Digital Branding</li>
-<li>Social Media Content</li>
+<li>UI/UX Design</li>
 </ul>
 </div>
-<div class="skill-card">
-<h4>💼 Business</h4>
+<div class="card">
+<h3>💼 Business</h3>
 <ul>
 <li>Entrepreneurship</li>
-<li>Sales</li>
-<li>Supplier Management</li>
-<li>Purchase Management</li>
-<li>Stock Management</li>
+<li>Sales & Marketing</li>
 <li>Business Development</li>
+<li>Project Management</li>
+<li>Brand Building</li>
 </ul>
 </div>
-<div class="skill-card">
-<h4>🌟 Personal Interests</h4>
+<div class="card">
+<h3>🌟 Interests</h3>
 <ul>
-<li>Cars & Driving</li>
-<li>Travelling</li>
-<li>Music</li>
-<li>Football</li>
+<li>Automobiles & Driving</li>
+<li>Travelling & Exploration</li>
+<li>Music & Entertainment</li>
+<li>Sports & Fitness</li>
 <li>Luxury Lifestyle</li>
 </ul>
 </div>
 </div>
-</div>
 </section>
 
-<section style="background: #1a1a1a;">
-<div class="container">
-<h2>My Interests</h2>
-<div class="skills-grid">
-<div class="skill-card">
-<h4>🚗 Cars & Driving</h4>
-<p>I have a strong passion for cars and driving. For me, driving is more than transportation — it is an experience, freedom, and a way to explore.</p>
-</div>
-<div class="skill-card">
-<h4>✈️ Travelling</h4>
-<p>I love travelling, exploring new places, experiencing different environments, meeting people, and discovering new ideas.</p>
-</div>
-<div class="skill-card">
-<h4>🎵 Music</h4>
-<p>Music is an important part of my lifestyle and creativity.</p>
-</div>
-<div class="skill-card">
-<h4>⚽ Football</h4>
-<p>Football is one of my favourite sports, and I enjoy following the game, players, teams, and the competitive spirit of football.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="vision">
-<div class="container">
-<h2>My Vision</h2>
-<div style="max-width: 900px; margin: 0 auto; background: #1a1a1a; padding: 40px; border-radius: 8px; border-left: 4px solid #e61946;">
-<p style="font-size: 18px; margin-bottom: 25px;">My vision is to build a strong personal identity by combining technology, entrepreneurship, creativity, business, and luxury.</p>
-<p style="font-size: 18px; margin-bottom: 25px;">I want to create brands, digital products, businesses, and experiences that people remember.</p>
-<p style="font-size: 18px; margin-bottom: 25px; font-style: italic; color: #e61946;">I believe that learning never stops. Every new skill creates a new opportunity. Every idea can become something bigger. And every experience can become part of the journey.</p>
-</div>
-</div>
-</section>
-
-<section style="background: #1a1a1a;">
-<div class="container">
-<h2>My Philosophy</h2>
-<div style="max-width: 900px; margin: 0 auto; text-align: center;">
-<h3 style="font-size: 32px; color: #e61946; margin-bottom: 40px;">Think Different.<br/>Learn Continuously.<br/>Build Fearlessly.<br/>Create Beautifully.<br/>Dream Bigger.</h3>
-<p style="font-size: 18px;">I believe success comes from curiosity, consistency, creativity, discipline, and the courage to build your own path.</p>
-</div>
-</div>
-</section>
-
+<!-- Contact Section -->
 <section id="contact">
-<div class="container">
-<h2 style="text-align: center;">Let's Connect</h2>
-<div style="max-width: 600px; margin: 0 auto; text-align: center;">
-<p style="font-size: 18px; margin-bottom: 30px;">I'm always interested in connecting with people who share similar interests or want to collaborate on projects.</p>
-<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-<a href="https://instagram.com/shefinxroshan" target="_blank" class="btn">Instagram</a>
-<a href="https://facebook.com/shefinxroshan" target="_blank" class="btn" style="background: #1a1a1a; border: 2px solid #e61946;">Facebook</a>
-<a href="mailto:contact@shefinxroshan.com" class="btn">Email</a>
+<h2>Let's Connect</h2>
+<div class="card">
+<h3>Get In Touch</h3>
+<p>I'm always interested in connecting with people who share similar interests or want to collaborate on projects.</p>
+<div class="social-links">
+<a href="https://instagram.com/shefinxroshan" class="social-icon" title="Instagram">📱</a>
+<a href="https://facebook.com/shefinxroshan" class="social-icon" title="Facebook">f</a>
+<a href="mailto:contact@shefinxroshan.com" class="social-icon" title="Email">✉️</a>
+<a href="#" class="social-icon" title="LinkedIn">in</a>
 </div>
 </div>
 </section>
 
-<footer class="footer">
-<div class="container">
-<h3 style="margin-bottom: 20px;">SHEFIN X ROSHAN</h3>
-<p style="margin-bottom: 15px;">Entrepreneur • Creator • Technologist • Designer • Luxury Enthusiast</p>
-<p style="margin-bottom: 15px; color: #e61946;">Founder of SXR</p>
-<p style="margin-bottom: 30px; opacity: 0.7;">BCA | Technology | Cybersecurity | Business | Design | Sales | Lifestyle</p>
-<p style="color: #e61946; font-weight: 600; margin-bottom: 30px;">SXR: Built with Vision. Designed with Purpose. Driven by Ambition.</p>
-<p style="opacity: 0.6;">© 2024 Shefin X Roshan. All rights reserved.</p>
-</div>
+<!-- Footer -->
+<footer>
+<div class="footer-title">SHEFIN X ROSHAN</div>
+<p>Entrepreneur • Creator • Technologist • Designer</p>
+<p style="margin-top: 10px; color: var(--accent);">Founder of SXR</p>
+<p style="margin-top: 20px;">Built with Vision. Designed with Purpose. Driven by Ambition.</p>
+<p style="margin-top: 20px; opacity: 0.6;">© 2024 Shefin X Roshan. All rights reserved.</p>
 </footer>
+
+<script>
+// Custom Cursor
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorRing = document.querySelector('.cursor-ring');
+
+window.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  cursorDot.style.left = x - 4 + 'px';
+  cursorDot.style.top = y - 4 + 'px';
+
+  cursorRing.style.left = x - 15 + 'px';
+  cursorRing.style.top = y - 15 + 'px';
+});
+
+window.addEventListener('mousedown', () => {
+  cursorRing.style.transform = 'scale(0.8)';
+});
+
+window.addEventListener('mouseup', () => {
+  cursorRing.style.transform = 'scale(1)';
+});
+
+// Canvas Animation
+const canvas = document.getElementById('heroCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+const particleCount = 50;
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.vx = (Math.random() - 0.5) * 0.5;
+    this.vy = (Math.random() - 0.5) * 0.5;
+    this.size = Math.random() * 2 + 1;
+    this.opacity = Math.random() * 0.5 + 0.3;
+  }
+
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+
+    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+  }
+
+  draw() {
+    ctx.fillStyle = `rgba(255, 30, 45, ${this.opacity})`;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+function initParticles() {
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+}
+
+function drawConnections() {
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 100) {
+        ctx.strokeStyle = `rgba(255, 30, 45, ${0.2 * (1 - distance / 100)})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(particle => {
+    particle.update();
+    particle.draw();
+  });
+
+  drawConnections();
+  requestAnimationFrame(animate);
+}
+
+initParticles();
+animate();
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+// Smooth scroll behavior
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
 
 </body>
 </html>
